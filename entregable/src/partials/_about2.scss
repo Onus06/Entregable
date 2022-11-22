@@ -26,7 +26,7 @@
                 min-height: 350px;
 
                 @media (max-width: $breakPoint) {
-                    margin-top: 25px;
+                    margin-top: 20px;
                 }
 
                 img {
@@ -39,95 +39,5 @@
                 }
             }
         }
-    }
-}
-
-.textWrap {
-    max-width: 900px;
-    text-align: center;
-
-    h2 {
-        font-size: 4.5em;
-        line-height: 1.1;
-        color: $white;
-        margin-bottom: 10px;
-        text-shadow: 0 3px 5px rgba(0, 0 , 0, 0.5);
-
-        @media (max-whidth: $breakPoint) {
-            font-size: 2.5em;
-        }
-    }
-
-    p {
-        font-size: 1em;
-        color: #fff;
-    }
-
-    .btn {
-        font-size: 1em;
-        color: #fff;
-        background-color: $primaryColor;
-        display: inline-block;
-        padding: 10px 30px;
-        margin-top: 20px;
-        text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        transition: 0.5s;
-
-        &:hover {
-            letter-spacing: 4px;
-        }
-    }
-
-    > * {
-        opacity: 0;
-        transform: translateY(-45px);
-        transition: all 1s;
-    }
-}
-
-.textWrap {
-    max-width: 900px;
-    text-align: center;
-
-    h2 {
-        font-size: 4.5em;
-        line-height: 1.1;
-        color: $white;
-        margin-bottom: 10px;
-        text-shadow: 0 3px 5px rgba(0, 0 , 0, 0.5);
-
-        @media (max-whidth: $breakPoint) {
-            font-size: 2.5em;
-        }
-    }
-
-    p {
-        font-size: 1em;
-        color: #fff;
-    }
-
-    .btn {
-        font-size: 1em;
-        color: #fff;
-        background-color: $primaryColor;
-        display: inline-block;
-        padding: 10px 30px;
-        margin-top: 20px;
-        text-decoration: none;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        transition: 0.5s;
-
-        &:hover {
-            letter-spacing: 4px;
-        }
-    }
-
-    > * {
-        opacity: 0;
-        transform: translateY(-45px);
-        transition: all 1s;
     }
 }
