@@ -49,7 +49,9 @@ const Descuentos = () => {
     }
 
     return (
+        
         <section className='about' id='about'>
+            <h2 className='titleText'>Descuentos</h2>
             <div className='row'>
                 <div className='column'>
                     <About5 />
