@@ -40,6 +40,7 @@ function App() {
           </div>
         </div>
       </nav>
+
       <About />
       <Carrusel />
       <About2 />

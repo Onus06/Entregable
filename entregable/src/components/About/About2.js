@@ -72,6 +72,7 @@ const About2 = () => {
                         <img src={aboutImage} alt={aboutTitle} />
                     </div>
                     
+                    
                 </div>
             </div>
         </section>
