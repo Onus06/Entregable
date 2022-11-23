@@ -18,8 +18,6 @@ const Descuentos = () => {
             const { id } = sys
             const aboutTitle =fields.title
             const aboutContent = getHTMLData (fields.content)
-            //const aboutDescription = getHTMLData (fields.content)
-            const aboutDescription = fields.description
             const aboutImage = fields.image.fields.file.url
             let cleanAbout = { id, aboutTitle, aboutContent, aboutImage }
 
@@ -50,33 +48,18 @@ const Descuentos = () => {
         return <Loader />
     }
 
-    const { aboutTitle, aboutContent, aboutImage, aboutDescription } = about
-
     return (
         <section className='about' id='about'>
             <div className='row'>
                 <div className='column'>
                     <About5 />
-                    <div class="d-grid gap-2">
-                    </div>
+                    <About5 />
                 </div>
                 <div className='column'>
-                    <div className='imgWrap'>
+                    <div>
+                        <About5 />
                         <About5 />
                     </div>
-                    
-                </div>
-                <div className='column'>
-                    <div className='imgWrap'>
-                        <About5 />
-                    </div>
-                    
-                </div>
-                <div className='column'>
-                    <div className='imgWrap'>
-                        <About5 />
-                    </div>
-                    
                 </div>
             </div>
         </section>

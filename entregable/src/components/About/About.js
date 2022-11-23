@@ -61,8 +61,8 @@ const About = () => {
                     <div class="d-grid gap-2">
                     <p></p>
                     <div className='container' style={{marginTop:"50px"}}>
-                    <h2 className='titleText'>Buscar Productos</h2>
-                        <div className='justify-content-center'>
+                    <h2 className='titleText' >Buscar Productos</h2 >
+                            <div className='justify-content-center'>
                             <div className=''>
                                 <div className='col-lg-8'>
                                     <hr/>
