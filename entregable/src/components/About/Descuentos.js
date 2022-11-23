@@ -2,13 +2,14 @@ import React, {useState, useEffect, useCallback } from 'react'
 import {marked} from 'marked'
 import { client } from '../../client'
 import Loader from '../Loader/Loader'
+import About5 from './About5'
 
 const getHTMLData = (rawData) => {
     const htmlString = marked (rawData)
     return htmlString
 }
 
-const About2 = () => {
+const Descuentos = () => {
     const [about, setAbout] = useState({})
     const [isAboutLoading, setIsAboutLoading] = useState(false)
 
@@ -18,7 +19,7 @@ const About2 = () => {
             const aboutTitle =fields.title
             const aboutContent = getHTMLData (fields.content)
             //const aboutDescription = getHTMLData (fields.content)
-            //const aboutDescription = fields.description
+            const aboutDescription = fields.description
             const aboutImage = fields.image.fields.file.url
             let cleanAbout = { id, aboutTitle, aboutContent, aboutImage }
 
@@ -55,21 +56,25 @@ const About2 = () => {
         <section className='about' id='about'>
             <div className='row'>
                 <div className='column'>
-                    <h1>{aboutTitle}</h1>
-                    <p></p>
-                    <div dangerouslySetInnerHTML={{ __html: aboutContent}} /> 
-                    <h3>{aboutDescription}</h3>
-                    
+                    <About5 />
                     <div class="d-grid gap-2">
-                    <p></p>
-                    <p></p>
-                    <button class="btn btn-secondary" href='https://d2nz2gwc4w9br.cloudfront.net/checkout' type="button">Agregar
-                        </button>
                     </div>
                 </div>
                 <div className='column'>
                     <div className='imgWrap'>
-                        <img src={aboutImage} alt={aboutTitle} />
+                        <About5 />
+                    </div>
+                    
+                </div>
+                <div className='column'>
+                    <div className='imgWrap'>
+                        <About5 />
+                    </div>
+                    
+                </div>
+                <div className='column'>
+                    <div className='imgWrap'>
+                        <About5 />
                     </div>
                     
                 </div>
@@ -79,4 +84,4 @@ const About2 = () => {
     
 }
 
-export default About2
+export default Descuentos

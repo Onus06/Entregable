@@ -15,9 +15,9 @@ const About = () => {
     const cleanUpAbout = useCallback((rawData) => {
             const { sys, fields } = rawData
             const { id } = sys
-            const aboutTitle =fields.title
+            const aboutTitle = fields.title
             const aboutContent = getHTMLData (fields.content)
-            const aboutDescription = fields.description
+            //const aboutDescription = getHTMLData (fields.description)
             const aboutImage = fields.image.fields.file.url
             let cleanAbout = { id, aboutTitle, aboutContent, aboutDescription, aboutImage }
 
@@ -51,20 +51,44 @@ const About = () => {
     const { aboutTitle, aboutContent, aboutDescription, aboutImage } = about
 
     return (
-        <section className='about' id='about'>
+        <section className='about' id='about'>            
             <div className='row'>
                 <div className='column'>
-                    <h2 className='tieleText'>{aboutTitle}</h2>
-                    <div dangerouslySetInnerHTML={{ __html: aboutContent}} />
-                    <div dangerouslySetInnerHTML={{ __html: aboutDescription}} />
+                <h1>{aboutTitle}</h1>
+                <br />
+                    <div dangerouslySetInnerHTML={{ __html: aboutContent}} /> 
+                        <h3>{aboutDescription}</h3>
+                    <div class="d-grid gap-2">
+                    <p></p>
+                    <div className='container' style={{marginTop:"50px"}}>
+                    <h2 className='titleText'>Buscar Productos</h2>
+                        <div className='justify-content-center'>
+                            <div className=''>
+                                <div className='col-lg-8'>
+                                    <hr/>
+                                    <div className='row'>
+                                        <div className='col-lg-6'>
+                                            <label htmlForm="firstName" className="form-label">Nombre</label>
+                                            <input type="text" className="form-control" id="addres" placeholder="Ej: Ibuprofeno" value={''}/>
+                                        </div>
+                                        <div className='col-lg-6'>
+                                            <label htmlFor="lastName" className="form-label">Referencia</label>
+                                            <input type="text" className="form-control" id="addres" placeholder="Ej: 0000123879" value={''}/>
+                                        </div>        
+                                    </div>     
+                                    <br />                        
+                                </div>       
+                                </div>
+                            </div>
+                        </div>
+                    <p></p>
+                    <button class="btn btn-primary" type="button">Buscar</button>
+                    </div>
                 </div>
                 <div className='column'>
                     <div className='imgWrap'>
                         <img src={aboutImage} alt={aboutTitle} />
                     </div>
-                </div>
-                
-                <div>
                 </div>
             </div>
         </section>

@@ -8,7 +8,7 @@ const getHTMLData = (rawData) => {
     return htmlString
 }
 
-const About2 = () => {
+const About4 = () => {
     const [about, setAbout] = useState({})
     const [isAboutLoading, setIsAboutLoading] = useState(false)
 
@@ -17,7 +17,7 @@ const About2 = () => {
             const { id } = sys
             const aboutTitle =fields.title
             const aboutContent = getHTMLData (fields.content)
-            //const aboutDescription = getHTMLData (fields.content)
+            //const aboutDescription = getHTMLData (fields.description)
             //const aboutDescription = fields.description
             const aboutImage = fields.image.fields.file.url
             let cleanAbout = { id, aboutTitle, aboutContent, aboutImage }
@@ -28,7 +28,7 @@ const About2 = () => {
     const getAbout = useCallback (async () => {
         setIsAboutLoading(true)
         try {
-            const response = await client.getEntry('720utaM8acVT8aBWqwycxr')
+            const response = await client.getEntry('odRHiTjeA7pMKc9s0BImD')
             if (response) {
                 cleanUpAbout(response)
             } else {
@@ -79,4 +79,4 @@ const About2 = () => {
     
 }
 
-export default About2
+export default About4
